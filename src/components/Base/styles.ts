@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import * as Dialog from '@radix-ui/react-dialog';
+import * as RadioGroup from '@radix-ui/react-radio-group';
 
 export const BaseContainer = styled.div`
   width: 100%;
@@ -7,9 +9,11 @@ export const BaseContainer = styled.div`
   margin: 0 auto;
 `
 
-export const BaseButton = styled.button<{
-  variant?: 'secondary'
-}>`${s => css`
+interface BaseButtonProps {
+  variant?: 'secondary' | 'radio'
+}
+
+export const BaseButtonStyle = css`${s => css`
   height: 3.125rem;
   border: 1px solid ${s.theme["green-500"]};
   background: ${s.theme["green-500"]};
@@ -28,6 +32,10 @@ export const BaseButton = styled.button<{
     background: ${s.theme["green-700"]};
     border: 1px solid ${s.theme["green-700"]};
   }
+`}`
+
+export const BaseButton = styled.button<BaseButtonProps>`${s => css`
+  ${BaseButtonStyle}
 
   ${s.variant === 'secondary' && css`
     background: none;
@@ -42,6 +50,13 @@ export const BaseButton = styled.button<{
   `}
 `}`
 
+export const BaseRadio = styled(RadioGroup.Item)`${s => css`
+  ${BaseButtonStyle}
+  background: ${s.theme["gray-700"]};
+  color: ${s.theme["gray-300"]};
+  border: 1px solid ${s.theme["gray-700"]};
+`}`
+
 export const BaseInput = styled.input`${s => css`
   flex: 1;
   border-radius: 6px;
@@ -54,3 +69,35 @@ export const BaseInput = styled.input`${s => css`
     color: ${s.theme["gray-500"]};
   }
 `}`
+
+export const BaseModalOverlay = styled(Dialog.Overlay)`
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+`
+
+export const BaseModalContent = styled(Dialog.Content)`${s => css`
+  min-width: 32rem;
+  border-radius: 6px;
+  padding: 2.5rem 3rem;
+  background: ${s.theme["gray-800"]};
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`}`
+
+export const BaseModalCloseButton = styled(Dialog.Close)`${s => css`
+  position: absolute;
+  background: transparent;
+  border: 0;
+  top: 1.5rem;
+  right: 1.5rem;
+  line-height: 0;
+  cursor: pointer;
+  color: ${s.theme["gray-500"]};
+`}`
+
+export const BaseModalTitle = styled(Dialog.Title)``

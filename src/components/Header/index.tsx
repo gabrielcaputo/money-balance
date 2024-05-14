@@ -1,7 +1,8 @@
 import { Scales } from "@phosphor-icons/react";
 import { HeaderContainer, HeaderLogo, HeaderWrapper } from "./styles";
-import { BaseButton } from "../Base/styles";
+
 import { useTheme } from "styled-components";
+import { NewTransactionModal } from "../NewTransactionModal";
 
 export function Header() {
   const theme = useTheme()
@@ -12,10 +13,8 @@ export function Header() {
           <Scales color={theme["green-500"]} weight="fill" size={'2.5rem'} />
           <span>Money Balance</span>
         </HeaderLogo>
-        <BaseButton>Nova transação</BaseButton>
+        <NewTransactionModal />
       </HeaderContainer>
     </HeaderWrapper>
-
-    
   )
 }
