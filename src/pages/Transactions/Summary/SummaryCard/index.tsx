@@ -3,7 +3,7 @@ import { ArrowCircleDown } from "@phosphor-icons/react";
 import { CurrencyDollar  } from "@phosphor-icons/react";
 import { SummaryCardWrapper } from "./styles";
 import { useTheme } from "styled-components";
-import { ConvertToMoney } from "../../../../@helpers/convertToMoney";
+import { priceFormatter } from "../../../../@utils/formatter";
 
 interface SummaryCardProps {
   value: number | string,
@@ -42,7 +42,7 @@ export function SummaryCard(props: SummaryCardProps) {
         <span>{title}</span>
         <SummaryIcon name={icon.name} color={icon.color} />
       </header>
-      <strong>{ConvertToMoney(Number(value))}</strong>
+      <strong>{priceFormatter(value)}</strong>
     </SummaryCardWrapper>
   )
 }

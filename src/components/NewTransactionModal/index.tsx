@@ -18,7 +18,7 @@ export function NewTransactionModal() {
           </BaseModalCloseButton>
           <TransactionForm>
             <BaseInput type="text" placeholder="Descrição" required />
-            <BaseInput type="number" placeholder="Preço" required />
+            <BaseInput type="number" min={0} placeholder="Preço" required />
             <BaseInput type="text" placeholder="Categoria" required />
 
             <TransactionType>

@@ -1,40 +1,24 @@
 import { Price, TableContainer } from "./styles"
+import { priceFormatter, dateFormatter } from "../../../@utils/formatter";
+import { useContext } from "react";
+import { TransactionsContext } from "../../../contexts/TransactionsContext";
 
 export function Table() {
+  const { transactions } = useContext(TransactionsContext)
   return (
     <TableContainer>
       <table>
         <tbody>
-          <tr>
-            <td>Nome</td>
-            <td><Price value={-12500.00}>R$ -12.500,00</Price></td>
-            <td>Venda</td>
-            <td>13/04/2024</td>
-          </tr>
-          <tr>
-            <td>Nome</td>
-            <td><Price value={12500.00}>R$ 12.500,00</Price></td>
-            <td>Venda</td>
-            <td>13/04/2024</td>
-          </tr>
-          <tr>
-            <td>Nome</td>
-            <td><Price value={12500.00}>R$ 12.500,00</Price></td>
-            <td>Venda</td>
-            <td>13/04/2024</td>
-          </tr>
-          <tr>
-            <td>Nome</td>
-            <td><Price value={12500.00}>R$ 12.500,00</Price></td>
-            <td>Venda</td>
-            <td>13/04/2024</td>
-          </tr>
-          <tr>
-            <td>Nome</td>
-            <td><Price value={12500.00}>R$ 12.500,00</Price></td>
-            <td>Venda</td>
-            <td>13/04/2024</td>
-          </tr>
+          {transactions.map(transaction => {
+            return (
+              <tr key={transaction.id}>
+                <td>{transaction.description}</td>
+                <td><Price value={transaction.price}>{priceFormatter(transaction.price)}</Price></td>
+                <td>{transaction.category}</td>
+                <td>{dateFormatter(transaction.createdAt)}</td>
+              </tr>
+            )
+          })}
         </tbody>
       </table>
     </TableContainer>
