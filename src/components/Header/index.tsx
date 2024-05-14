@@ -9,8 +9,8 @@ export function Header() {
     <HeaderWrapper>
       <HeaderContainer>
         <HeaderLogo>
-          <Scales color={theme["green-500"]} weight="fill" size={'2rem'} />
-          Money Balance
+          <Scales color={theme["green-500"]} weight="fill" size={'2.5rem'} />
+          <span>Money Balance</span>
         </HeaderLogo>
         <BaseButton>Nova transação</BaseButton>
       </HeaderContainer>

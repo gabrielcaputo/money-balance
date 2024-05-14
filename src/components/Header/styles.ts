@@ -21,4 +21,10 @@ export const HeaderLogo = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   gap: 0.5rem;
+  
+  @media screen and (max-width: 960px) {
+    span {
+      display: none;
+    }
+  }
 `
