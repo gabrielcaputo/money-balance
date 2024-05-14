@@ -1,29 +1,11 @@
 import { SummaryContainer } from "./styles";
 import { useTheme } from "styled-components";
 import { SummaryCard } from "./SummaryCard";
-import { useContext } from "react";
-import { TransactionsContext } from "../../../contexts/TransactionsContext";
+import { useSummary } from "../../../hooks/useSummary";
 
 export function Summary() {
   const theme = useTheme()
-  const { transactions } = useContext(TransactionsContext)
-
-  const summary = transactions.reduce(
-    (val, transaction) => {
-      if (transaction.type === 'income') {
-        val.income += transaction.price
-        val.total += transaction.price
-      } else {
-        val.outcome -= transaction.price
-        val.total += transaction.price
-      }
-      return val
-    }, {
-      income: 0,
-      outcome: 0,
-      total: 0
-    }
-  )
+  const summary = useSummary()
 
   return(
     <SummaryContainer>

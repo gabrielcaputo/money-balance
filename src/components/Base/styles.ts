@@ -27,11 +27,17 @@ export const BaseButtonStyle = css`${s => css`
   justify-content: center;
   gap: 0.75rem;
   transition: all 0.2s ease;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
   
-  &:hover {
+  &:not(:disabled):hover{
     background: ${s.theme["green-700"]};
     border: 1px solid ${s.theme["green-700"]};
   }
+
 `}`
 
 export const BaseButton = styled.button<BaseButtonProps>`${s => css`
@@ -42,7 +48,7 @@ export const BaseButton = styled.button<BaseButtonProps>`${s => css`
     border: 1px solid ${s.theme["green-300"]};
     color: ${s.theme["green-300"]};
 
-    &:hover {
+    &:not(:disabled):hover {
       color: ${s.theme.white};
       background: ${s.theme["green-500"]};
       border: 1px solid ${s.theme["green-500"]};
