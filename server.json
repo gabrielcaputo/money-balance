@@ -1,28 +1,28 @@
 {
   "transactions": [
     {
-      "id": 1,
-      "description": "Desenvolvimento de site",
-      "type": "income",
-      "category": "Venda",
-      "price": 14000,
-      "createdAt": "2022-07-29T19:36:44.505Z"
+      "description": "Clipet",
+      "price": -40,
+      "category": "Veterinário",
+      "type": "outcome",
+      "createdAt": "2024-05-15T02:09:40.047Z",
+      "id": 3
     },
     {
-      "id": 2,
-      "description": "Hambúrguer",
-      "type": "outcome",
+      "description": "Equador Botequim",
+      "price": -107,
       "category": "Alimentação",
-      "price": -50,
-      "createdAt": "2022-07-29T19:30:44.505Z"
+      "type": "outcome",
+      "createdAt": "2024-05-15T02:09:25.559Z",
+      "id": 2
     },
     {
-      "id": 3,
-      "description": "Parcela do seguro",
-      "type": "outcome",
-      "category": "Segurança",
-      "price": -450,
-      "createdAt": "2022-07-29T19:30:44.505Z"
+      "description": "Desenvolvimento de Site",
+      "price": 15900,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2024-05-15T02:09:12.624Z",
+      "id": 1
     }
   ]
 }
