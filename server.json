@@ -23,38 +23,6 @@
       "category": "Segurança",
       "price": -450,
       "createdAt": "2022-07-29T19:30:44.505Z"
-    },
-    {
-      "description": "teste",
-      "price": -10,
-      "category": "TEste",
-      "type": "outcome",
-      "createdAt": "2024-05-14T22:39:13.076Z",
-      "id": 4
-    },
-    {
-      "description": "Pastel",
-      "price": -5,
-      "category": "Alimentação",
-      "type": "outcome",
-      "createdAt": "2024-05-14T22:42:41.558Z",
-      "id": 5
-    },
-    {
-      "description": "teste",
-      "price": 10,
-      "category": "eita",
-      "type": "income",
-      "createdAt": "2024-05-14T22:50:06.619Z",
-      "id": 6
-    },
-    {
-      "description": "teste2",
-      "price": -4343,
-      "category": "teste",
-      "type": "outcome",
-      "createdAt": "2024-05-14T22:50:28.514Z",
-      "id": 7
     }
   ]
 }

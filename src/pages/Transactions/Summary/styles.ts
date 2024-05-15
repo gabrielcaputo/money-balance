@@ -6,8 +6,9 @@ export const SummaryContainer = styled(BaseContainer)`
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: -5rem;
+  overflow: auto;
 
   @media screen and (max-width: 960px) {
-    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 `

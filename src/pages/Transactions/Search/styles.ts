@@ -8,4 +8,10 @@ export const SearchContainer = styled(BaseContainer)`
 export const SearchForm = styled.form`
   display: flex;
   gap: 1rem;
+
+  @media screen and (max-width: 420px) {
+    button span {
+      display: none;
+    }
+  }
 `

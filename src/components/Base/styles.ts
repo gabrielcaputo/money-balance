@@ -85,7 +85,8 @@ export const BaseModalOverlay = styled(Dialog.Overlay)`
 `
 
 export const BaseModalContent = styled(Dialog.Content)`${s => css`
-  min-width: 32rem;
+  max-width: 32rem;
+  width: calc(100% - 2rem);
   border-radius: 6px;
   padding: 2.5rem 3rem;
   background: ${s.theme["gray-800"]};
@@ -93,6 +94,17 @@ export const BaseModalContent = styled(Dialog.Content)`${s => css`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (max-width: 640px) {
+    padding: 1.5rem;
+    top: auto;
+    left: auto;
+    bottom: 0;
+    transform: translate(0, 0);
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    max-width: initial;
+  }
 `}`
 
 export const BaseModalCloseButton = styled(Dialog.Close)`${s => css`
