@@ -3,7 +3,7 @@ import { ArrowCircleDown } from "@phosphor-icons/react";
 import { CurrencyDollar  } from "@phosphor-icons/react";
 import { SummaryCardWrapper } from "./styles";
 import { useTheme } from "styled-components";
-import { priceFormatter } from "../../../../@utils/formatter";
+import { priceFormatter } from "../../../../utils/formatter";
 
 interface SummaryCardProps {
   value: number | string,

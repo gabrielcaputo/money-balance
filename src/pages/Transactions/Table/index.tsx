@@ -1,5 +1,5 @@
 import { Price, TableContainer } from "./styles"
-import { priceFormatter, dateFormatter } from "../../../@utils/formatter";
+import { priceFormatter, dateFormatter } from "../../../utils/formatter";
 import { TransactionsContext } from "../../../contexts/TransactionsContext";
 import { useContextSelector } from "use-context-selector";
 import { TagSimple } from "@phosphor-icons/react";
