@@ -16,5 +16,6 @@ export const SummaryCardWrapper = styled.div<{color: string}>`${s => css`
     display: block;
     margin-top: 1rem;
     font-size: 2rem;
+    white-space: nowrap;
   }
 `}`

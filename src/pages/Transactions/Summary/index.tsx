@@ -28,7 +28,7 @@ export function Summary() {
       <SummaryCard
         title="Total"
         value={summary.total}
-        color={theme["green-700"]}
+        color={summary.total >= 0 ? theme["green-700"] : theme["red-700"]}
         icon={{
           color: `${theme.white}`,
           name: 'CurrencyDollar',
